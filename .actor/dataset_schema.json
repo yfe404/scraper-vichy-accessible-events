@@ -1,0 +1,55 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "url": "string",
+        "name": "string",
+        "description": "string",
+        "startDate": "date",
+        "endDate": "date",
+        "venue": "string",
+        "address": "string",
+        "city": "string",
+        "postalCode": "string",
+        "latitude": "number",
+        "longitude": "number",
+        "images": "array"
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "url",
+                    "name",
+                    "description",
+                    "startDate",
+                    "endDate",
+                    "venue",
+                    "address",
+                    "city",
+                    "postalCode",
+                    "latitude",
+                    "longitude",
+                    "images"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "url": { "label": "Event link", "format": "link" },
+                    "name": { "label": "Title", "format": "text" },
+                    "description": { "label": "Summary", "format": "text" },
+                    "startDate": { "label": "Start", "format": "date" },
+                    "endDate": { "label": "End", "format": "date" },
+                    "venue": { "label": "Venue", "format": "text" },
+                    "address": { "label": "Address", "format": "text" },
+                    "city": { "label": "City", "format": "text" },
+                    "postalCode": { "label": "ZIP", "format": "text" },
+                    "latitude": { "label": "Lat", "format": "number" },
+                    "longitude": { "label": "Lng", "format": "number" },
+                    "images": { "label": "Images", "format": "array" }
+                }
+            }
+        }
+    }
+}
