@@ -47,7 +47,7 @@ const postBody = {
 };
 
 /* ── seed RequestQueue with a single playlist request ─────────────────── */
-const rq = await Actor.openRequestQueue('playlist');
+const rq = await Actor.openRequestQueue();
 const router = buildRouter();
 await rq.addRequest({
     url: ENDPOINT,
@@ -61,7 +61,6 @@ await rq.addRequest({
 /* ── run crawler with external router (routes.ts) ──────────────────────── */
 const crawler = new CheerioCrawler({
     requestQueue: rq,
-    maxConcurrency: 10,
     requestHandler: router,
 });
 
